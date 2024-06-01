@@ -1,0 +1,35 @@
+/* src/components/Module.css */
+.module {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px;
+  background-color: white;
+  transition: background-color 0.2s;
+}
+
+.module.dragging {
+  opacity: 0.5;
+}
+
+.module.over {
+  background-color: #f5f5f5;
+}
+
+.module-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.module-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+  padding: 5px;
+}
+
+.module-actions button:hover {
+  text-decoration: underline;
+}
