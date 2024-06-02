@@ -16,7 +16,7 @@ const App = () => {
       <div className="content">
         {modules.length === 0 ? (
           <div className="empty-state">
-            <img src="empty-state-illustration.png" alt="Empty State" />
+            <img src="empty.png" alt="Empty State" />
             <p>Nothing added here yet</p>
             <p>Click on the [+] Add button to add items to this course</p>
           </div>
