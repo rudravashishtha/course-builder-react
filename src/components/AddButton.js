@@ -22,7 +22,7 @@ const AddButton = ({ setModules }) => {
     if (linkName && linkUrl) {
       setModules((prevModules) => [
         ...prevModules,
-        { id: Date.now(), name: linkName, resources: [{ name: linkName, url: linkUrl }] },
+        { id: Date.now(), name: linkName, resources: [{ name: linkUrl, url: linkUrl }] },
       ]);
     }
   };
@@ -36,6 +36,14 @@ const AddButton = ({ setModules }) => {
       const file = event.target.files[0];
       if (file) {
         // Perform the file upload logic here
+        // Show the image preview
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const img = new Image();
+          img.src = e.target.result;
+          document.body.appendChild(img);
+        };
+        reader.readAsDataURL(file);
         // You can use libraries like axios or fetch to send the file to the server
         // Example:
         const formData = new FormData();
